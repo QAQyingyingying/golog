@@ -13,29 +13,37 @@ const (
 	textWhite
 )
 
-func Black(str string) string {
+func Black(msg ...any) string {
+	str := fmt.Sprint(msg...)
 	return textColor(textBlack, str)
 }
 
-func Red(str string) string {
+func red(msg ...any) string {
+	str := fmt.Sprint(msg...)
 	return textColor(textRed, str)
 }
-func Yellow(str string) string {
+func yellow(msg ...any) string {
+	str := fmt.Sprint(msg...)
 	return textColor(textYellow, str)
 }
-func Green(str string) string {
+func green(msg ...any) string {
+	str := fmt.Sprint(msg...)
 	return textColor(textGreen, str)
 }
-func Cyan(str string) string {
+func Cyan(msg ...any) string {
+	str := fmt.Sprint(msg...)
 	return textColor(textCyan, str)
 }
-func Blue(str string) string {
+func Blue(msg ...any) string {
+	str := fmt.Sprint(msg...)
 	return textColor(textBlue, str)
 }
-func Purple(str string) string {
+func Purple(msg ...any) string {
+	str := fmt.Sprint(msg...)
 	return textColor(textPurple, str)
 }
-func White(str string) string {
+func white(msg ...any) string {
+	str := fmt.Sprint(msg...)
 	return textColor(textWhite, str)
 }
 

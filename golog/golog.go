@@ -5,48 +5,48 @@ import (
 	"runtime"
 )
 
-func Info(msg string) {
+func Info(msg ...any) {
 	pc, _, _, ok := runtime.Caller(1)
 	funcName := "unKnow"
 	if ok {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
-	log.SetPrefix(White("INFO  " + "[" + funcName + "] "))
-	log.Print(White(msg))
+	log.SetPrefix(white("INFO  " + "[" + funcName + "] "))
+	log.Print(white(msg...))
 }
-func DEBUG(msg string) {
+func DEBUG(msg ...any) {
 	pc, _, _, ok := runtime.Caller(1)
 	funcName := "unKnow"
 	if ok {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
-	log.SetPrefix(Green("DEBUG " + "[" + funcName + "] "))
-	log.Print(Green(msg))
+	log.SetPrefix(green("DEBUG " + "[" + funcName + "] "))
+	log.Print(green(msg...))
 }
-func WARN(msg string) {
+func WARN(msg ...any) {
 	pc, _, _, ok := runtime.Caller(1)
 	funcName := "unKnow"
 	if ok {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
-	log.SetPrefix(Yellow("WARN  " + "[" + funcName + "] "))
-	log.Print(Yellow(msg))
+	log.SetPrefix(yellow("WARN  " + "[" + funcName + "] "))
+	log.Print(yellow(msg...))
 }
-func ERROR(msg string) {
+func ERROR(msg ...any) {
 	pc, _, _, ok := runtime.Caller(1)
 	funcName := "unKnow"
 	if ok {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
-	log.SetPrefix(Red("ERROR " + "[" + funcName + "] "))
-	log.Print(Red(msg))
+	log.SetPrefix(red("ERROR " + "[" + funcName + "] "))
+	log.Print(red(msg...))
 }
-func ERRORANDSTOP(msg string) {
+func ERRORANDSTOP(msg ...any) {
 	pc, _, _, ok := runtime.Caller(1)
 	funcName := "unKnow"
 	if ok {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
-	log.SetPrefix(Red("ERROR " + "[" + funcName + "] "))
-	log.Fatal(Red(msg))
+	log.SetPrefix(red("ERROR " + "[" + funcName + "] "))
+	log.Fatal(red(msg...))
 }
