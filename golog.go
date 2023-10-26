@@ -1,4 +1,4 @@
-package golog
+package main
 
 import (
 	"log"
@@ -11,42 +11,42 @@ func Info(msg ...any) {
 	if ok {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
-	log.SetPrefix(white("INFO  " + "[" + funcName + "] "))
+	log.SetPrefix("INFO  " + "[" + funcName + "] ")
 	log.Print(white(msg...))
 }
-func DEBUG(msg ...any) {
+func Debug(msg ...any) {
 	pc, _, _, ok := runtime.Caller(1)
 	funcName := "unKnow"
 	if ok {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
-	log.SetPrefix(green("DEBUG " + "[" + funcName + "] "))
-	log.Print(green(msg...))
+	log.SetPrefix(Green("DEBUG " + "[" + funcName + "] "))
+	log.Print(Green(msg...))
 }
-func WARN(msg ...any) {
+func Warn(msg ...any) {
 	pc, _, _, ok := runtime.Caller(1)
 	funcName := "unKnow"
 	if ok {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
-	log.SetPrefix(yellow("WARN  " + "[" + funcName + "] "))
-	log.Print(yellow(msg...))
+	log.SetPrefix(Yellow("WARN  " + "[" + funcName + "] "))
+	log.Print(Yellow(msg...))
 }
-func ERROR(msg ...any) {
+func Error(msg ...any) {
 	pc, _, _, ok := runtime.Caller(1)
 	funcName := "unKnow"
 	if ok {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
-	log.SetPrefix(red("ERROR " + "[" + funcName + "] "))
-	log.Print(red(msg...))
+	log.SetPrefix(Red("ERROR " + "[" + funcName + "] "))
+	log.Print(Red(msg...))
 }
-func ERRORANDSTOP(msg ...any) {
+func ErrorAndExit(msg ...any) {
 	pc, _, _, ok := runtime.Caller(1)
 	funcName := "unKnow"
 	if ok {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
-	log.SetPrefix(red("ERROR " + "[" + funcName + "] "))
-	log.Fatal(red(msg...))
+	log.SetPrefix(Purple("EXIT  " + "[" + funcName + "] "))
+	log.Fatal(Purple(msg...))
 }

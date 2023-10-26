@@ -1,4 +1,4 @@
-package golog
+package main
 
 import "fmt"
 
@@ -18,15 +18,15 @@ func Black(msg ...any) string {
 	return textColor(textBlack, str)
 }
 
-func red(msg ...any) string {
+func Red(msg ...any) string {
 	str := fmt.Sprint(msg...)
 	return textColor(textRed, str)
 }
-func yellow(msg ...any) string {
+func Yellow(msg ...any) string {
 	str := fmt.Sprint(msg...)
 	return textColor(textYellow, str)
 }
-func green(msg ...any) string {
+func Green(msg ...any) string {
 	str := fmt.Sprint(msg...)
 	return textColor(textGreen, str)
 }
