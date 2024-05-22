@@ -13,7 +13,7 @@ func Info(msg ...any) {
 		funcName = runtime.FuncForPC(pc).Name()
 	}
 	log.SetPrefix("INFO  " + "[" + funcName + "] ")
-	log.Print(white(msg...))
+	log.Print(White(msg...))
 }
 
 // Debug 调试信息
