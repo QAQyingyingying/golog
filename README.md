@@ -24,4 +24,5 @@ func main() {
 }
 ```
 ## 效果
-![输入图片说明](.idea/Snipaste_2024-05-22_21-19-27.png)
+![image](https://github.com/QAQyingyingying/golog/assets/49606783/75606725-38bb-4564-a7aa-b56acff32d1d)
+
